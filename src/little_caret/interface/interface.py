@@ -12,7 +12,7 @@ class Interface:
         self,
         data: dict[str, list[int]],
     ):
-        raise NotImplementedError()
+        self._record.append(data)
 
 
 
@@ -20,8 +20,7 @@ class Interface:
         self._bokeh.line_graph(self._record)
 
     def bar_plot(self):
-        raise NotImplementedError()
-
+        self._bokeh.bar_graph(self._record)
 
 
     @property # ()無しで参照できる

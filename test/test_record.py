@@ -50,18 +50,18 @@ class TestRecord:
     # Q06: 凸凹な配列を同じサイズにする関数を実装せよ
     def test_same_size(self):
         data = {
-            "tako" : [1, 2, 3, 4, 5],
+            "tako" : [1, 2, 3, 4],
             "ika"  : [2, 3, 4],
-            "kani" : [4, 5, 2, 1],
+            "kani" : [4, 5, 2, 1, 5],
         }
         expect_data = {
-            "tako" : [1, 2, 3, 4, 5],
-            "ika"  : [2, 3, 4, 0 ,0],
-            "kani" : [4, 5, 2, 1, 0],
+            "tako" : [1, 2, 3, 4, 0],
+            "ika"  : [2, 3, 4, 0, 0],
+            "kani" : [4, 5, 2, 1, 5],
         }
 
-        raise NotImplementedError()
-
+        record = Record(data)
+        assert record.data == expect_data
 
     # Q07: Intデータのときは、1要素の配列して保管せよ
     def test_int_data(self):
