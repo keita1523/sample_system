@@ -72,6 +72,7 @@ class TestRecord:
         with pytest.raises(TypeError):
             record = Record(data)
 
+    # Q08: Intデータのときは、1要素の配列して保管せよ
     def test_int_data(self):
         data = {
             "ika" : 10,
