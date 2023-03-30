@@ -62,17 +62,8 @@ class TestRecord:
 
         raise NotImplementedError()
 
-    # Q07: データ型がIntではない場合、エラーを出すような実装に変更せよ
-    # ヒント: pytest.raises(TypeError)はTypeErrorが発生すると成功と認識する
-    def test_different_type_data(self):
-        data = {
-            "tako" : ["tako1", "tako2"],
-        }
 
-        with pytest.raises(TypeError):
-            record = Record(data)
-
-    # Q08: Intデータのときは、1要素の配列して保管せよ
+    # Q07: Intデータのときは、1要素の配列して保管せよ
     def test_int_data(self):
         data = {
             "ika" : 10,
@@ -83,3 +74,15 @@ class TestRecord:
 
         record = Record(data)
         assert record.data == expect_data
+
+    # Q08: データ型がIntではない場合、エラーを出すような実装に変更せよ
+    # ヒント: pytest.raises(TypeError)はTypeErrorが発生すると成功と認識する
+    def test_different_type_data(self):
+        data = {
+            "tako" : ["tako1", "tako2"],
+        }
+
+        with pytest.raises(TypeError):
+            record = Record(data)
+
+
